@@ -5,10 +5,10 @@
 }
 
 :root {
-    --primary-color: #fa0000; /* Cor primĆ�ria (azul claro) */
-    --secondary-color: rgb(251, 255, 0); /* Cor secundĆ�ria (cinza claro) */
-    --tertiary-color: #000000; /* Cor terciĆ�ria (cinza mĆ©dio) */
-    --bg-color: #0a0a0a; /* Cor de fundo (cinza escuro) */
+    --primary-color: #bf0a0d; /* Cor primĆ�ria (azul claro) */
+    --secondary-color: #e6e1c2; /* Cor secundĆ�ria (cinza claro) */
+    --tertiary-color: #6d9788; /* Cor terciĆ�ria (cinza mĆ©dio) */
+    --bg-color: #1e2528; /* Cor de fundo (cinza escuro) */
 }
 
 body {

@@ -6,7 +6,7 @@
     "link": "https://pt.wikipedia.org/wiki/Rodolfo_Abrantes"
 },
 {
-    "nome": "Fernando Miguel",
+    "nome": "Fernando Schaefer",
     "nascimento": "2 de setembro de 1976",
     "descrição": "Foi convidado por Rodolfo para compor a bateria do disco Estreito. Com os shows da banda sendo marcados, Fernandão ganhou seu espaço na banda.",
     "link": "https://pt.wikipedia.org/wiki/Fernando_Schaefer"
@@ -31,7 +31,7 @@
 },
 {
     "nome": "Pedro Nogueira",
-    "nascimento": "Não se sabe :/",
+    "nascimento": "08 de maio de 1981",
     "descrição": "A banda precisava de mais um guitarrista pra tocar nos shows. Com isso, Patrick indicou Pedro pra assumir esse cargo.",
     "link": "https://www.instagram.com/pedrogpnogueira/"
 },
@@ -40,5 +40,11 @@
     "nascimento": "9 de dezembro de 1965",
     "descrição": "Canisso saiu do Raimundos em 2002, e em 2003 recebeu um convite do própio Rodolfo pra assumir o baixo, no lugar de Patrick Laplan.",
     "link": "https://pt.wikipedia.org/wiki/Canisso"
+},
+{
+    "nome": "Marcelo Magal",
+    "nascimento": "26 de dezembro de 1978",
+    "descrição": "Após a saída de Pedro Nogueira da banda, Marcelo entrou com atitude pra assumir a segunda guitarra.",
+    "link" : "https://pt.wikipedia.org/wiki/Marcelo_Magal"
 }
 ]
