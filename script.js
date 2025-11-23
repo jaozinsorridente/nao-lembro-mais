@@ -3,7 +3,6 @@ let inputBusca = document.querySelector("input[type='text']");
 let dadosCompletos = []; // Array para armazenar todos os dados
 
 // 1. Função de Carregamento Inicial
-// É chamada automaticamente ao carregar a página.
 async function carregarDados() {
     try {
         let resposta = await fetch("data.json");
@@ -14,14 +13,13 @@ async function carregarDados() {
         
     } catch (erro) {
         console.error("Erro ao carregar dados:", erro);
-        // Exibe uma mensagem de erro no container se o JSON falhar
         cardContainer.innerHTML = '<h2>Não foi possível carregar os dados.</h2>';
     }
 }
 
-// 2. Função de Renderização dos Cards (Reutilizável)
+// 2. Função de Renderização dos Cards
 function renderizarCards(dadosParaRenderizar) {
-    // 3. Limpa os resultados anteriores antes de renderizar os novos
+    // Limpa os resultados anteriores
     cardContainer.innerHTML = ''; 
 
     if (dadosParaRenderizar.length === 0) {
@@ -29,7 +27,7 @@ function renderizarCards(dadosParaRenderizar) {
         return;
     }
 
-    // Cria e adiciona um artigo para cada item no array fornecido
+    // Cria e adiciona um artigo para cada item
     for (let dado of dadosParaRenderizar) {
         let article = document.createElement("article");
         article.classList.add("card");
@@ -43,9 +41,9 @@ function renderizarCards(dadosParaRenderizar) {
     }
 }
 
-// 4. Função Principal de Busca (Chamada pelo botão)
+// 3. Função Principal de Busca (Chamada pelo botão)
 function iniciarBusca() {
-    // 4.1. Obtém o termo de busca do input e o padroniza (minúsculas)
+    // Obtém e padroniza o termo de busca (minúsculas)
     let termoBusca = inputBusca.value.trim().toLowerCase();
     
     // Se o campo estiver vazio, exibe todos os dados
@@ -54,18 +52,16 @@ function iniciarBusca() {
         return;
     }
 
-    // 4.2. Filtra o array 'dadosCompletos'
-    // Retorna TRUE para manter o item, FALSE para descartar.
+    // Filtra o array 'dadosCompletos'
     const resultadosFiltrados = dadosCompletos.filter(dado => {
-        // Verifica se o termo está no nome OU na descrição
+        // Busca insensível a maiúsculas/minúsculas no nome OU na descrição
         const nomeInclui = dado.nome.toLowerCase().includes(termoBusca);
         const descricaoInclui = dado.descrição.toLowerCase().includes(termoBusca);
         
-        // Mantém o item se a busca for encontrada no nome OU na descrição
         return nomeInclui || descricaoInclui;
     });
 
-    // 4.3. Renderiza a lista de resultados filtrados
+    // Renderiza a lista de resultados filtrados
     renderizarCards(resultadosFiltrados);
 }
 
